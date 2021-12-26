@@ -1,0 +1,14 @@
+spring:
+  profile: france
+  application:
+    name: eureka-server-clustered   # ==> This is Service-Id
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: my-eureka-server-fr.com
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://my-eureka-server-us.com:9001/eureka/,http://my-eureka-server-vn.com:9003/eureka/
